@@ -17,11 +17,17 @@ public class Names {
             middleName = splitnames[1];
             lastName = splitnames[2];
         }
+        else if (splitnames.length == 1){
+            firstName = splitnames[0];
+        }
     }
 
     @Override
     public String toString() {
-        if (middleName == null){
+        if (middleName == null && lastName == null){
+            return firstName;
+        }
+        else if (middleName == null){
             return firstName + " " + lastName;
         }
         else return firstName + " " + middleName + " " + lastName;
