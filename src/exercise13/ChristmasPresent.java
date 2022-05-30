@@ -10,17 +10,19 @@ public class ChristmasPresent {
 
     public ChristmasPresent() {
         Random random = new Random();
+        for (int i = 0; i < 100; i++) {
         this.isSoft = random.nextBoolean();
-        this.isRectangular = random.nextBoolean();;
-        this.doesRattle = random.nextBoolean();;
+        this.isRectangular = random.nextBoolean();
+        this.doesRattle = random.nextBoolean();
+        System.out.println(couldBeLego());
+        }
     }
 
     public boolean couldBeLego(){
-        return isSoft && isRectangular && doesRattle;
+        return !isSoft && isRectangular && doesRattle;
     }
 
     public static void main(String[] args) {
         ChristmasPresent present = new ChristmasPresent();
-        System.out.println(present.couldBeLego());
     }
 }
