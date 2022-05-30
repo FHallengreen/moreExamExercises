@@ -21,7 +21,7 @@ public class examQuestion {
         grade.put(5,'E');
         grade.put(6,'F');
         for (int i = 0; i < 14; i++) {
-        number = random.nextInt(1,6);
+        number = random.nextInt(1,7);
         char getGrade = grade.get(number);
         grades.add(getGrade);
         }
