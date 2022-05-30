@@ -4,26 +4,30 @@ import java.util.HashMap;
 
 public class Card {
     private int value;
-    private HashMap <String, Integer> suit;
+    private String suit;
+    private HashMap <String, Integer> suitMap = new HashMap<>();
 
-    Card(HashMap<String, Integer> suit, int value){
+    public Card(String suit, int value){
         this.suit = suit;
         this.value = value;
     }
 
-    public void beats (int card, int suits){
+    public void beats (int valueOP, String suitOP){
 
-        suit.put("spades",0);
-        suit.put("clubs",1);
-        suit.put("diamonds",2);
-        suit.put("hearts",3);
+        suitMap.put("spades",0);
+        suitMap.put("clubs",1);
+        suitMap.put("diamonds",2);
+        suitMap.put("hearts",3);
 
-       /* for (int i = 0; i < suit.size(); i++) {
-            if (suit.get(i) > suit.get(i))
-        }*/
 
-        if (value > card){
-            System.out.println("dit kort " + value + " er større end " + card);
+            if (suitMap.get(suit) > suitMap.get(suitOP)){
+                System.out.println("dit kort " + suit + " er større end " + suitOP);
         }
+        if (value > valueOP){
+            System.out.println("dit kort " + value + " er større end " + valueOP);
+        }
+        else System.out.println("Dit kort slår ikke modstanderen.");
     }
+
+
 }
