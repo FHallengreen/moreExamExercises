@@ -6,7 +6,7 @@ public class Names {
     private String middleName;
     private String lastName;
 
-    public Names(String fullname) {
+ /*   public Names(String fullname) {
         String[] splitnames = fullname.split(" ");
 
         if (splitnames.length == 2) {
@@ -20,6 +20,12 @@ public class Names {
         else if (splitnames.length == 1){
             firstName = splitnames[0];
         }
+    }*/
+
+    public Names(String fullname) {
+        this.firstName = fullname.substring(0,fullname.indexOf(" "));
+        int firstIndex = fullname.indexOf(" ");
+        this.middleName = fullname.substring(firstIndex,fullname.indexOf(" "));
     }
 
     @Override
