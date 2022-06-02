@@ -1,9 +1,14 @@
 package exercise19;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
     public class Dream implements Comparable<Dream>{
+
+        public String getDate() {
+            return date;
+        }
 
         private String date;
         private int duration;
@@ -40,7 +45,7 @@ import java.util.Collections;
             dreamlist.add(dream2);
             dreamlist.add(dream3);
             System.out.println(dreamlist);
-            Collections.sort(dreamlist);
+            Collections.sort(dreamlist,new Compare());
             System.out.println(dreamlist);
         }
 
