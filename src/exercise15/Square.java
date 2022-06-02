@@ -7,6 +7,10 @@ public class Square implements Shape {
     private int width;
     private int square;
 
+    public Square(int width) {
+        this.width = width;
+    }
+
     public Square() {
         Random random = new Random();
         for (int i = 0; i < 20; i++) {

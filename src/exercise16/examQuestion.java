@@ -40,7 +40,7 @@ public class examQuestion {
         System.out.println(exam.grades);
 
         PrintStream prt = new PrintStream("Grades.txt");
-        prt.print(exam.grades);
+        prt.println(exam.grades);
 
     }
 }
