@@ -1,0 +1,3 @@
+Højtaler: 10: 10dB
+Headset: 15: 5dB
+Fjernsyn: 1000: 16:9
