@@ -7,7 +7,7 @@ public class HogwartsStudent {
 
     private String firstName;
     private String lastName;
-    private String house;
+    private WhichHouse house;
 
     public HogwartsStudent(String firstName, String lastName) {
         this.firstName = firstName;
@@ -23,15 +23,9 @@ public class HogwartsStudent {
     }
 
 
-    public String setHouse(String house) {
+    public WhichHouse setHouse(WhichHouse house) {
         try {
-            if (house.equals("Gryffindor")) {
-                this.house = house;
-            } else if (house.equals("Hufflepuff")) {
-                this.house = house;
-            } else if (house.equals("Ravenclaw")) {
-                this.house = house;
-            } else if (house.equals("Slytherin")) {
+            if (house == WhichHouse.GRYFFINDOR || house == WhichHouse.SLYTHERIN || house == WhichHouse.HUFFLEPUFF || house == WhichHouse.RAVENCLAW){
                 this.house = house;
             } else throw new Exception("Ugyldigt valg");
         } catch (Exception ex) {
@@ -54,7 +48,7 @@ public class HogwartsStudent {
         System.out.println(studentList);
         Collections.sort(studentList, new compareLastName());
         System.out.println(studentList);
-        student.setHouse("Gryffindor");
+        student.setHouse(WhichHouse.GRYFFINDOR);
 
 
     }
