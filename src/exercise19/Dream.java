@@ -33,8 +33,6 @@ import java.util.Collections;
             return false;
         }
 
-
-
         public static void main(String[] args) {
             Dream dream = new Dream("31/05/2022",15,Drømmetype.VÅD);
             Dream dream2 = new Dream("05/05/2022",5,Drømmetype.VÅD);
@@ -55,6 +53,7 @@ import java.util.Collections;
 
         @Override
         public int compareTo(Dream o) {
+
             return this.date.compareTo(o.date);
         }
     }
