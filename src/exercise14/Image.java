@@ -35,6 +35,6 @@ public class Image {
 
 
     public static void main(String[] args) {
-        Image image = new Image("Godmorgensol.jpg",200,500);
+        Image image = new Image("Godmorgensol.pdf",1000,500);
     }
 }

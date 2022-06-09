@@ -10,12 +10,10 @@ public class ChristmasPresent {
 
     public ChristmasPresent() {
         Random random = new Random();
-        for (int i = 0; i < 100; i++) {
         this.isSoft = random.nextBoolean();
         this.isRectangular = random.nextBoolean();
         this.doesRattle = random.nextBoolean();
         System.out.println(couldBeLego());
-        }
     }
 
     public boolean couldBeLego(){
